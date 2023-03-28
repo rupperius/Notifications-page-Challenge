@@ -75,7 +75,6 @@ header{
     gap: 1rem;
     border-radius: 20px;
     width: 95%;
-    line-height: 1rem;
 }
 
 .unread {
@@ -87,7 +86,6 @@ header{
     content: "•";
     width: 30px;
     height: 30px;
-    
 }
 
 #girl_chessboard {
@@ -126,6 +124,7 @@ header{
 p {
     color: var(--dark-grayish-blue);
     font-size: 16px;
+    margin-bottom: 0.2rem;
 }
 
 a:link {
@@ -133,20 +132,29 @@ a:link {
     text-decoration: none;
 }
 
+main {
+    height: 1000px;
+}
 
-.attribution { 
+footer {
+    margin-bottom: auto;
     font-size: 11px; text-align: center; 
-}
-    
-.attribution a 
-    { color: hsl(228, 45%, 44%); 
+    color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (max-with: 800px) {
+@media screen and (max-width:550px) {
     article {
         margin: 0;
-        width: auto;
+        width: 340px;
         height: auto;
+    }
+
+    .unread-number {
+        font-weight: 500;
+        padding: 0.2rem;
+        margin-right: 5rem;
+        width: 25px;
+        height: 25px;
     }
 
     #mark:active {
@@ -160,5 +168,21 @@ a:link {
 
     .message:active {
         background-color: var(--light-grayish-blue-1); 
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    p, span {
+        font-size: 12px;
+    }
+    footer {
+        display: none;
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
     }
 }
