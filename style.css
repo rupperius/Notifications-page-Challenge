@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--very-light-grayish-blue);
+    max-width: 1400px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 900px;
+    background-color: var(--white);
+    gap: 1rem;
+    border-radius: 20px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    width: 95%;
+    height: 10%; 
+}
+
+.unread-number {
+    background-color: var(--blue);
+    color: var(--white);
+    width: 35px;
+    height: 30px;
+    font-weight: 800;
+    padding: 0.3rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-right: 20rem;
+}
+
+#mark {
+    color: var(--grayish-blue);
+    cursor: pointer;
+}
+
+#mark:hover {
+    color: var(--blue);
+}
+
+.notifications {
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 20px;
+    width: 95%;
+    line-height: 1rem;
+}
+
+.unread {
+    background-color: var(--very-light-grayish-blue) ;
+}
+
+.unread::after{
+    color: var(--red);
+    content: "•";
+    width: 30px;
+    height: 30px;
+    
+}
+
+#girl_chessboard {
+    margin-left: auto;
+}
+
+.message {
+    padding: 0 2rem;
+    margin-left: 5rem;
+    margin-right: 1.5rem;
+    height: 7rem;
+    background-color: var(--light-grayish-blue-1);
+    
+}
+
+.user {
+    color: var(--very-dark-blue);
+}
+
+.user:hover, .thema:hover {
+    color: var(--blue);
+    
+}
+
+.clicked {
+    color: var(--grayish-blue);
+}
+
+.date {
+    color: var(--grayish-blue);
+}
+
+p {
+    color: var(--dark-grayish-blue);
+    font-size: 16px;
+}
+
+a:link {
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+    
+.attribution a 
+    { color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-with: 800px) {
+    article {
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+
+    #mark:active {
+    color: var(--blue);
+    }
+
+    .user:active, .thema:active {
+        color: var(--blue);
+        
+    }
+}
